@@ -1,0 +1,23 @@
+@import './base.css';
+@import './styles.css';
+@import './pages.css';
+
+:root {
+    --base-font-size: 16px;
+    --primary-font: 'Arial', sans-serif;
+    --secondary-font: 'Times New Roman', serif;
+
+    --bg-color: #2B2B2B;
+    --bg-panel: #363636;
+    --bg-dark: #252525;
+
+    --font-color-primary: #EEE;
+    --font-color-secondary: #999;
+    --color-alpha: #99999965;
+
+    --color-primary: #047404;
+
+    --effect-transition: 250ms ease-in-out;
+
+    --theme-switcher-position: 1rem;
+}

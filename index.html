@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking Bad API</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://kit.fontawesome.com/5fe8692b14.js" crossorigin="anonymous"></script>
+    <script src="./js/scripts.js" defer></script>
+    <script src="./js/state.js" defer></script>
+    <script src="./js/templates.js" defer></script>
+</head>
+<body>
+    <main class="page-wrapper">
+        <div class="content-wrapper">
+            <header class="page-header">
+                <a href="/" class="logo">
+                    <div class="breaking-text">
+                        <span class="element-text">Br</span>eaking
+                    </div>
+                    <div class="bad-text">
+                        <span class="element-text">Ba</span>d
+                    </div>
+                </a>
+                <div class="menu-toggle" data-menu-toggle>
+                    <span class="bars"></span>
+                </div>
+                <nav class="site-nav" data-nav-menu>
+                    <ul class="nav-links defaults-removed">
+                        <li class="nav-link" data-link="home"><i class="fas fa-home"></i> Home</li>
+                        <li class="nav-link" data-link="about"><i class="fas fa-question-circle"></i> About</li>
+                        <li class="nav-link" data-link="favorites"><i class="fas fa-star"></i> Favorite Characters</li>
+                    </ul>
+                </nav>
+            </header>
+            <section class="hero-section">
+                <div class="hero-wrapper">
+                    <h2>Search, Save, & Rate Your Favorite <em>Breaking Bad</em> Characters.</h2>
+                </div>
+            </section>
+            <div class="container" data-content-section>
+                <div class="page-title" data-page-title></div>
+                <div class="filter-options" data-filter-options-container>
+                    <label class="char-search" for="search">
+                        <input id="search" type="text" placeholder="search...">
+                        <span class="search-icon" data-search-icon><i class="fas fa-search"></i></span>
+                    </label>
+                    <ul class="filter-links defaults-removed">
+                        <li class="filter-link active" data-filter="all">All (<span data-count="all">0</span>)</li>
+                        <li class="filter-link" data-filter="alive">Alive (<span data-count="alive">0</span>)</li>
+                        <li class="filter-link" data-filter="deceased">Deceased (<span data-count="deceased">0</span>)</li>
+                        <li class="filter-link" data-filter="presumed dead">Presumed Dead (<span data-count="presumed dead">0</span>)</li>
+                        <li>|</li>
+                        <li class="filter-link sort active" data-sort="default">Order of Significance</li>
+                        <li class="filter-link sort" data-sort="asc">A-Z</li>
+                        <li class="filter-link sort" data-sort="dsc">Z-A</li>
+                    </ul>
+                </div>
+                <div class="characters-wrapper" data-character-grid>
+                    Loading...
+                    <noscript>JavaScript is required to run this application.</noscript>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="back-to-top" data-top-btn>
+        <i class="fas fa-chevron-up"></i>
+    </div>
+</body>
+</html>
