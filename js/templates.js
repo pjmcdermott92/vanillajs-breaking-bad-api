@@ -2,7 +2,7 @@ function getCharacterCardTemplate(character) {
     const favoriteChar = favoriteCharacters.filter(char => char.id === character.char_id);
     const { char_id, name, nickname, status, img } = character;
     const characterRating = () => {
-        if (state['currentView'] !== 'favorites') return '';
+        if (state.currentView !== 'favorites') return '';
         const rating = favoriteChar[0].rating;
         const starIcons = rating === 0 ? '(not rated)' : '<i class="fas fa-star"></i>'.repeat(rating);
         return `
@@ -20,7 +20,7 @@ function getCharacterCardTemplate(character) {
     }
 
     return `
-        <div id="${char_id}" class="character-card" data-character-card="${nickname}" data-status="${status}" aria-hidden="false">
+        <div id="${char_id}" class="character-card">
             <div class="img-wrapper">
                 <img src="${img}" alt="${name}">
             </div>

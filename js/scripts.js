@@ -40,7 +40,7 @@ for (link of navLinks) {
         menuToggleBtn.classList.remove('menu-active');
         navMenu.classList.remove('menu-active');
         const currentLink = e.target.dataset.link;
-        if (state['currentView'] === currentLink) return;
+        if (state.currentView === currentLink) return;
         setState('currentView', currentLink);
     })
 }

@@ -76,7 +76,7 @@ function setPageTitle(value, show) {
 function updateFilterLinks() {
     filterLinks.forEach(link => {
         link.classList.remove('active');
-        if( link.dataset.filter === state['filter']) link.classList.add('active');
+        if( link.dataset.filter === state.filter) link.classList.add('active');
     });
 }
 
@@ -84,7 +84,7 @@ function updateSortLinks() {
     sortLinks.forEach(link => {
         link.classList.remove('active');
         const sort = link.dataset.sort;
-        sort === state['sort'] && link.classList.add('active');
+        sort === state.sort && link.classList.add('active');
     })
 }
 
@@ -103,7 +103,7 @@ function handleDetailModal(id) {
     const character = characters.filter(char => char.char_id === id);
     const { name, nickname, img, status, occupation, portrayed } = character[0];
     let rating = 0;
-    if (state['currentView'] === 'favorites') rating = favoriteCharacters.filter(char => char.id === id)[0].rating;
+    if (state.currentView === 'favorites') rating = favoriteCharacters.filter(char => char.id === id)[0].rating;
 
     const charObj = {
         id: id, name: name, nickname: nickname, img: img, status: status, occupation: occupation, portrayed: portrayed, rating: rating
